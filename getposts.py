@@ -9,7 +9,7 @@ env = Environment(
     autoescape=select_autoescape()
 )
 
-url = "http://dataleak.hopeless99.top/groups"
+url = "https://ransomwatch.telemetry.ltd/groups"
 r = requests.get(url)
 groups_raw = r.json()
 groups ={}
@@ -21,7 +21,7 @@ for group in groups_raw:
             break
     
 
-url = "http://dataleak.hopeless99.top/posts"
+url = "https://ransomwatch.telemetry.ltd/posts"
 r = requests.get(url)
 template = env.get_template("temp1.html")
 ransoms = r.json()
