@@ -34,4 +34,4 @@ for ransom in ransoms:
         ransom['group_fqdn'] = None
 
 with open('./index.html','w') as f:
-            f.write(template.render(ransoms=ransoms,fecha=dt.now(tz=timezone(timedelta(hours=8))).strftime('%d-%b-%Y %H:%M %Z')))
+            f.write(template.render(ransoms=ransoms,fecha=dt.now(tz=timezone.utc+8).strftime('%d-%b-%Y %H:%M %Z')))
