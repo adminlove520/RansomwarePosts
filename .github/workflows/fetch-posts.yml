@@ -1,4 +1,4 @@
-name: Fetch posts
+name: Fetch Posts
 on: 
   schedule:
     - cron: '33 6,12,18 * * *'
