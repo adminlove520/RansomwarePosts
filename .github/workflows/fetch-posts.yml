@@ -2,6 +2,14 @@ name: Fetch Posts
 on: 
   schedule:
     - cron: '33 6,12,18 * * *'
+  workflow_dispatch:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: write
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
