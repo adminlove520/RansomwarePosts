@@ -16,7 +16,7 @@ jobs:
           pip3 install -r requirements.txt
           python3 getposts.py
           git config user.name "adminlove520"
-          git config user.email "actions@users.noreply.github.com"
+          git config user.email "791751568@qq.com"
           git add index.html
           DATE=$(date -Iseconds)
           git commit --message="Posts fetch on $DATE"
