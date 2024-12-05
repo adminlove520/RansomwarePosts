@@ -1,7 +1,8 @@
 import requests
 from jinja2 import Environment, FileSystemLoader, select_autoescape
-from datetime import datetime as dt
-from datetime import timezone
+# from datetime import datetime as dt
+# from datetime import timezone
+from datetime import datetime
 import json
 
 env = Environment(
@@ -34,4 +35,4 @@ for ransom in ransoms:
         ransom['group_fqdn'] = None
 
 with open('./index.html','w') as f:
-            f.write(template.render(ransoms=ransoms,fecha=dt.now(tz=timezone.utc).strftime('%d-%b-%Y %H:%M %Z')))
+            f.write(template.render(ransoms=ransoms,fecha=datetime.now().strftime('%d-%b-%Y %H:%M %Z')))
