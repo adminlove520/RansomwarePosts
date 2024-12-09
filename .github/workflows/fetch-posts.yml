@@ -26,7 +26,7 @@ jobs:
           git config user.name "adminlove520"
           git config user.email "791751568@qq.com"
           git add index.html
-          DATE=$(date -Iseconds)
+          DATE=$(TZ='Asia/Shanghai' date -Iseconds)
           git commit --message="Posts fetch on $DATE"
       - name: Hace el «push»
         uses: ad-m/github-push-action@master
